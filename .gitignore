@@ -15,8 +15,8 @@ target/
 *.jar
 
 #/1.JavaSyntax/
-/2.JavaCore/
-/3.JavaMultithreading/
+#/2.JavaCore/
+#/3.JavaMultithreading/
 /4.JavaCollections/
 /5.OnlineInternship/
 /out/
@@ -24,3 +24,4 @@ target/
 /Instruction.png
 /out.log
 /out.log.*
+/lib/javafx-sdk-18.0.1/
