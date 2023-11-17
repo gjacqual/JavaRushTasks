@@ -1,4 +1,4 @@
-﻿#############
+#############
 ## Idea
 #############
 target/
@@ -25,3 +25,4 @@ target/
 /out.log
 /out.log.*
 /lib/javafx-sdk-18.0.1/
+.DS_Store
