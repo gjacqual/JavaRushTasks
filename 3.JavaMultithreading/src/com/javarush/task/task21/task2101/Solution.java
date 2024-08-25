@@ -4,6 +4,8 @@ package com.javarush.task.task21.task2101;
 Определяем адрес сети
 */
 
+import java.nio.charset.StandardCharsets;
+
 public class Solution {
     public static void main(String[] args) {
         byte[] ip = new byte[]{(byte) 192, (byte) 168, 1, 2};
@@ -15,9 +17,21 @@ public class Solution {
     }
 
     public static byte[] getNetAddress(byte[] ip, byte[] mask) {
-        return new byte[4];
+
+        return new byte[] {(byte) (ip[0] & mask[0]), (byte) (ip[1] & mask[1]), (byte) (ip[2] & mask[2]), (byte) (ip[3] & mask[3])};
     }
 
     public static void print(byte[] bytes) {
+        int i = 0;
+        for (byte b : bytes) {
+            System.out.print(Integer.toBinaryString(0b100000000 | (b & 0xff)).substring(1));
+            if (i < 3) {
+                System.out.print(" ");
+            } else {
+                System.out.print("\n");
+            }
+            i++;
+        }
+
     }
 }

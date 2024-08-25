@@ -18,8 +18,10 @@ public class Solution {
     }
 
     public static boolean isModifierSet(int allModifiers, int specificModifier) {
-
-        return true;
+        if (allModifiers == (allModifiers | specificModifier)) {
+            return true;
+        }
+        return false;
     }
 
     private static Method getMainMethod() {
